@@ -1,0 +1,190 @@
+/* 基础样式设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* 问号样式 */
+.question-mark {
+    font-size: 14rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 8px #fff,
+        0 0 12px #0ff,
+        0 0 20px #0ff;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* 文本内容样式 */
+.text-content {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.line-1, .line-2 {
+    margin: 0.5rem 0;
+    text-shadow: 
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 12px #fff,
+        0 0 15px #0ff,
+        0 0 25px #0ff;
+    letter-spacing: 2px;
+}
+
+/* 输入框容器 */
+.input-container {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 输入框样式 */
+.neon-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 10px #0ff,
+        0 0 15px #0ff;
+}
+
+.neon-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.neon-input:focus {
+    box-shadow: 
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 10px #0ff,
+        0 0 15px #0ff,
+        0 0 20px #0ff;
+}
+
+/* 提交按钮样式 */
+.submit-btn {
+    position: absolute;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 10px #0ff;
+}
+
+.submit-btn:hover {
+    transform: scale(1.2);
+    text-shadow: 
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 15px #0ff,
+        0 0 20px #0ff;
+}
+
+/* 动画效果 */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 为文字添加闪烁效果 */
+.line-1 {
+    animation: pulse 2s infinite;
+}
+
+.line-2 {
+    animation: pulse 2.5s infinite;
+}
+
+/* 背景粒子样式 */
+.particle {
+    animation-timing-function: linear;
+}
+
+/* 媒体查询以确保在移动设备上正确显示 */
+@media (max-width: 768px) {
+    .question-mark {
+        font-size: 9rem;
+    }
+    
+    .text-content {
+        font-size: 1.2rem;
+    }
+    
+    .neon-input {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-mark {
+        font-size: 7rem;
+    }
+} 
