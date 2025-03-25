@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问题</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fade-in-text {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        .answer-text {
+            font-size: 2rem;
+            margin-bottom: 4rem;
+            animation-delay: 0.5s;
+        }
+        
+        .input-container {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question-mark">?</div>
+        <div class="text-content">
+            <div class="line-1 fade-in-text answer-text">答案的缺失亦是一种答案</div>
+        </div>
+        <div class="input-container">
+            <input type="text" class="neon-input" placeholder="继续">
+            <button class="submit-btn">→</button>
+        </div>
+    </div>
+    <script src="answer.js"></script>
+</body>
+</html> 

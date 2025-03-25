@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问题</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fade-in-text {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        .line-3 {
+            animation-delay: 0.5s;
+        }
+        
+        .line-4 {
+            animation-delay: 1.5s;
+        }
+        
+        .line-5 {
+            animation-delay: 2.5s;
+        }
+        
+        .input-container {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 3.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question-mark">?</div>
+        <div class="text-content">
+            <div class="line-1 fade-in-text">Made by 张博瑞</div>
+            <div class="line-2 fade-in-text line-3">很高兴你能看到这段话</div>
+            <div class="line-2 fade-in-text line-4">玩得愉快</div>
+        </div>
+        <div class="input-container">
+            <input type="text" class="neon-input" placeholder="那么你呢">
+            <button class="submit-btn">→</button>
+        </div>
+    </div>
+    <script src="you.js"></script>
+</body>
+</html> 
